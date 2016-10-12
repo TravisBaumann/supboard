@@ -55,20 +55,25 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _angular = __webpack_require__(2);
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _app = __webpack_require__(4);
+	var _sups = __webpack_require__(4);
+	
+	var _sups2 = _interopRequireDefault(_sups);
+	
+	var _app = __webpack_require__(9);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var AppModule = _angular2.default.module('app', []).component('app', _app2.default);
+	// not 100% sure what the following line does.
+	var AppModule = _angular2.default.module('app', [_sups2.default.name]).component('app', _app2.default);
 	
 	exports.default = AppModule;
 
@@ -31860,14 +31865,99 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _angular = __webpack_require__(2);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _supsPage = __webpack_require__(5);
+	
+	var _supsPage2 = _interopRequireDefault(_supsPage);
+	
+	var _supsItem = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./sups-item.component\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _supsItem2 = _interopRequireDefault(_supsItem);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SupsModule = _angular2.default.module('sups', []).component('supsPage', _supsPage2.default).component('supsPage', _supsItem2.default);
+	
+	exports.default = SupsModule;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _supsPage = __webpack_require__(6);
+	
+	var _supsPage2 = _interopRequireDefault(_supsPage);
+	
+	var _supsPage3 = __webpack_require__(7);
+	
+	var _supsPage4 = _interopRequireDefault(_supsPage3);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var supsPageComponent = {
+		template: _supsPage2.default,
+		controller: _supsPage4.default,
+		controllerAs: 'supsPageCtrl'
+	};
+	
+	// not sure what default does.
+	exports.default = supsPageComponent;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"jumbotron\">\n            <h1> SUP </h1>\n            <p class=\"lead\">\n                view the latest sups from around the world\n            </p>\n        </div>\n    </div>\n\n\n        <sups-item sup=\"supsPageCtrl.sup\"/>\n    </div>\n\n"
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	function SupsPageController() {
+		var ctrl = this;
+	
+		ctrl.sup = {
+			text: ' hey what up?',
+			created_date: new Date(Date.now)
+		};
+	}
+	
+	exports.default = SupsPageController;
+
+/***/ },
+/* 8 */,
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _app = __webpack_require__(5);
+	var _app = __webpack_require__(10);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _app3 = __webpack_require__(6);
+	var _app3 = __webpack_require__(11);
 	
 	var _app4 = _interopRequireDefault(_app3);
 	
@@ -31882,13 +31972,13 @@
 	exports.default = appComponent;
 
 /***/ },
-/* 5 */
+/* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<header>\n    <nav class=\"navbar navbar-inverse navbar-static-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <span class=\"navbar-brand\">\n                    <i class=\"fa fa-thumbs-o-up\"></i> SUPboard\n                </span>\n            </div>\n        </div>\n    </nav>\n</header>\n<div class=\"container-fluid\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"jumbotron\">\n            <h1> SUP </h1>\n            <p class=\"lead\">\n                view the latest sups from around the world\n            </p>\n        </div>\n    </div>\n    <div class=\"col-md-8\">\n        <h2>\n            Latest Sups\n        </h2>\n\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n            this is a sup\n            </div>\n        </div>\n        <div class=\"panel-footer clearfix\">\n            <div class=\"pull-right\">\n            10/12/16\n            </div>\n        </div>\n\n    </div>\n</div>"
+	module.exports = "<header>\n    <nav class=\"navbar navbar-inverse navbar-static-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <span class=\"navbar-brand\">\n                    <i class=\"fa fa-thumbs-o-up\"></i> SUPboard\n                </span>\n            </div>\n        </div>\n    </nav>\n</header>\n<div class=\"container-fluid\">\n    <sups-page/>\n</div>"
 
 /***/ },
-/* 6 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
