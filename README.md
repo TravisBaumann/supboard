@@ -1,7 +1,3 @@
-# DJANGO SEED
+# SupBoard
 
-Starting point for Django, Django Rest Framework, Angular, Webpack and Gulp projects.
-
-See the using-django-seed.md in the docs for usage.
-
-**Replace the contents of this doc with a README for your project**
+this is a supboard. its pure anarchy and you will love it. Make ananymous posts about your cat! Or just be mean to other people.
