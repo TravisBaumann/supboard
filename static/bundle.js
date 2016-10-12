@@ -31885,7 +31885,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "<header>\n    <nav class=\"navbar navbar-inverse navbar-static-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <span class=\"navbar-brand\">\n                    <i class=\"fa fa-thumbs-o-up\"></i> SUPboard\n                </span>\n            </div>\n        </div>\n    </nav>\n</header>\n<div class=\"container-fluid\">\n    Angular is working! BOOM! THATS NEAT AIN'T IT!\n</div>"
+	module.exports = "<header>\n    <nav class=\"navbar navbar-inverse navbar-static-top\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <span class=\"navbar-brand\">\n                    <i class=\"fa fa-thumbs-o-up\"></i> SUPboard\n                </span>\n            </div>\n        </div>\n    </nav>\n</header>\n<div class=\"container-fluid\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"jumbotron\">\n            <h1> SUP </h1>\n            <p class=\"lead\">\n                view the latest sups from around the world\n            </p>\n        </div>\n    </div>\n    <div class=\"col-md-8\">\n        <h2>\n            Latest Sups\n        </h2>\n\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n            this is a sup\n            </div>\n        </div>\n        <div class=\"panel-footer clearfix\">\n            <div class=\"pull-right\">\n            10/12/16\n            </div>\n        </div>\n\n    </div>\n</div>"
 
 /***/ },
 /* 6 */
